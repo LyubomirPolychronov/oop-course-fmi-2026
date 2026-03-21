@@ -23,7 +23,7 @@
 Имаме **създаване на нов обект**.
 
 ```cpp
-Person p1("Ivan");
+Person p1("Stefo");
 Person p2(p1);      // copy constructor
 Person p3 = p1;     // пак copy constructor
 ```
@@ -37,8 +37,8 @@ Person p3 = p1;     // пак copy constructor
 Имаме **вече съществуващ обект**, който променяме.
 
 ```cpp
-Person p1("Ivan");
-Person p2("Maria");
+Person p1("Stefo");
+Person p2; // default constructor
 
 p2 = p1;   // operator=
 ```
@@ -109,7 +109,7 @@ int main() {
 
 #### 1. При инициализация с друг обект
 ```cpp
-Person p1("Ivan");
+Person p1("Stefo");
 Person p2(p1);
 Person p3 = p1;
 ```
@@ -118,7 +118,7 @@ Person p3 = p1;
 ```cpp
 void printPerson(Person p) { ... }
 
-Person p("Ivan");
+Person p("Stefo");
 printPerson(p);   // p се създава като копие
 ```
 
@@ -215,7 +215,7 @@ struct Person {
 
 ```cpp
 int main() {
-    Person p1("Ivan", 20);
+    Person p1("Stefo", 22);
     Person p2 = p1;   // compiler-generated copy constructor
 
 } // и p1, и p2 ще извикат delete[] върху един и същи name
